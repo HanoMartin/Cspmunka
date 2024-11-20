@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>Title</title>
+<style>
+        body {
+        background: linear-gradient(to right, #00c6ff, #0072ff); /* kék-zöld színátmenet */
+                }
+
+        .button {
+        background-color: #007BFF;  /* Alap háttérszín */
+        color: white;  /* Fehér szöveg */
+        font-size: 18px;  /* Nagyobb betűméret */
+        border: none;  /* Nincs szegély */
+        padding: 12px 24px;  /* Belülről térköz */
+        border-radius: 8px;  /* Lekerekített sarkok */
+        cursor: pointer;  /* Kézkurzor, amikor fölé viszünk */
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+   
+        .button:hover {
+        background-color: #0056b3;  /* Sötétebb kék a hover hatására */
+        transform: scale(1.1);  /* Kis mértékű nagyítás */
+        }
+
+    
+        .button:focus {
+            outline: none;  /* Ne legyen körvonal a gomb körül */
+            box-shadow: 0 0 10px rgba(0, 123, 255, 0.6);  /* Kék árnyék */
+        }
+
+    
+        .button:disabled {
+            background-color: #cccccc;  /* Szürke szín, ha le van tiltva */
+            cursor: not-allowed;  /* Nem engedélyezett kurzor */
+        }
+
+        h5 {
+            font-size: 3rem;
+            color: #4A90E2;  /* Kék szín */
+            text-align: center;
+            text-transform: uppercase;  /* Nagybetűs */
+            letter-spacing: 2px;  /* Távolság a betűk között */
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);  /* Finom árnyék */
+            margin-bottom: 20px;
+        }
+
+        a{
+            font-size: 1.2rem;
+            color: #333;
+            line-height: 1.6;
+            text-align: justify;
+            max-width: 800px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);  /* Finom árnyék */
+        }
+
+        label{
+              font-size: 1.2rem;
+            color: #333;
+            line-height: 1.6;
+            text-align: justify;
+            max-width: 800px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);  /* Finom árnyék */
+        }
+</style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div>
+                <nav class="navbar navbar-expand-xl navbar-light bg-light col-sm-12 container-fluid">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">Navbar</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                            <div class="navbar-nav">
+                                <a class="nav-link active" aria-current="page" href="#">Kapcsolat</a>
+                                <a class="nav-link" href="#">Tananyag</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+      
+    
+        <div class="row">
+            <!-- Első kártya (Feleletválasztós kérdés 1) -->
+            <div class="col-lg-6 col-md-6 col-sm-12 mb-3 mt-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Melyik az elöltesztelő ciklus?</h5>
+                        <form id="question1">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="v" value="for" id="1valasz">
+                                <label class="form-check-label" for="1kerdes">for</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="v" value="while" id="2valasz">
+                                <label class="form-check-label" for="q1b">while</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="v" value="loop" id="3valasz">
+                                <label class="form-check-label" for="q1c">loop</label>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card-footer" id="visszai"> </div>
+                </div>
+            </div>
+    
+            <div class="col-lg-6 col-md-6 col-sm-12  mb-3 mt-4 container-fluid">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Melyik számláló ciklus?</h5>
+                        <form id="question2">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="v2" value="loop" id="valasz1">
+                                <label class="form-check-label" for="q2a">loop</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="v2" value="while" id="valasz2">
+                                <label class="form-check-label" for="q2b">while</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="v2" value="for" id="valasz3">
+                                <label class="form-check-label" for="q2c">for</label>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card-footer" id="visszaig2"> </div>
+                </div>
+            </div>
+    
+            <div class="col-12 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <input type="button" onclick="vizsgálás()" value="Beküldés" class="button">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="Tudáspróba.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>
